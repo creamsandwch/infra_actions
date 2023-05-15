@@ -30,7 +30,7 @@ jobs:
         run: |
           # project check w flake8
           python -m flake8
+          pip install django==2.2.20
           
           cd infra_project/
-          pip install -r requirements.txt
           python manage.py test
