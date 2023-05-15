@@ -65,7 +65,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            # Выполняет pull образа с DockerHub
+            # Выполняет pull образа с DockerHub, по идее
             sudo docker pull kreamsandwich/infra_actions
             # остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
