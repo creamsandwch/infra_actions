@@ -20,9 +20,16 @@ jobs:
           # flake8 installation w plugins
           pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
           # dependencies installation
+          
+          cd infra_project/
+          python manage.py test
+
           pip install -r requirements.txt
 
       - name: Test with flake8 and django tests
         run: |
           # project check w flake8
           python -m flake8
+          
+          cd infra_project/
+          python manage.py test
